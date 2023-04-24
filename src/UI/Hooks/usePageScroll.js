@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 const usePageScroll = (
     delay = 1000//모션 속도
 ) => {
-    const ref = useRef() //풀페이지 target
+    const ref = useRef() //풀페이지 target 풀페이지를 잡아줄 dom에 ref를 넣으면 됩니다
     const activeRef = useRef(false) //액션 진행 여부
     const numberRef = useRef(0)// 현재 페이지
     const onScroll = (e) => {

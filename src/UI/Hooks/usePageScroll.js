@@ -30,19 +30,15 @@ const usePageScroll = (delay = 2000) => {
         numberRef.current = changeNumber
     }
 
-    const pageSetting = () => {
-        const target = ref.current;
-        if (!target) return;
-        target.style.height = '100vh'
-        target.style.overflow = 'hidden'
-    }
-
     useEffect(() => {
         const target = ref.current;
-        pageSetting();
         target.addEventListener('wheel', onScroll, true)
+        target.style.height = '100vh'
+        target.style.overflow = 'hidden'
         return () => {
             target.addEventListener('wheel', onScroll, true)
+            target.style.height = ''
+            target.style.overflow = ''
         }
     }, [])
 

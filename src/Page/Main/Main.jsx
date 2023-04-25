@@ -6,6 +6,7 @@ function Main() {
     const ref = useRef([]);
     const ref2 = useRef([]);
     const imgRef = useRef();
+    const imgRef3 = useRef();
     const imgRef2 = useRef();
 
     useEffect(() => {
@@ -46,18 +47,26 @@ function Main() {
                     </p>
                     <p>
                         해석을 상
-                        {count === 1 ? (
-                            <img
-                                style={{ width: "104rem", height: "104rem" }}
-                                src="./asset/partly_cloudy_night (2).png"
-                            />
-                        ) : (
-                            "상"
-                        )}
+                        <strong
+                            style={{
+                                width: `${imgRef3?.current?.offsetWidth}px`,
+                            }}
+                        >
+                            <span className={count === 1 ? "active" : ""}>
+                                <img
+                                    style={{ width: "104rem" }}
+                                    ref={imgRef3}
+                                    src="./asset/partly_cloudy_night (2).png"
+                                />
+                            </span>
+                            <span className={count !== 1 ? "active" : ""}>
+                                상
+                            </span>
+                        </strong>
                         하고
                     </p>
                     <p>
-                        새로운{" "}
+                        새로운&nbsp;
                         <strong
                             style={{
                                 width: `${ref?.current[count]?.offsetWidth}px`,
@@ -95,7 +104,7 @@ function Main() {
                         를 만드는 것
                     </p>
                     <p>
-                        이것이 바로
+                        이것이 바로&nbsp;
                         <strong
                             style={{
                                 width: `${ref2?.current[count]?.offsetWidth}px`,

@@ -78,6 +78,9 @@ export const MainBox = styled.div`
                         p {
                             font-size: 30rem;
                             line-height: 40rem;
+                            + p {
+                                margin-top:10rem;
+                            }
                         }
                         .last {
                             display:block;
@@ -87,6 +90,9 @@ export const MainBox = styled.div`
                             .logo {
                                 height:20rem;
                                 margin-right:4rem;
+                            }
+                            .earthquake {
+                                height:30rem;
                             }
                         }
                     }

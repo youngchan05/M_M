@@ -157,7 +157,7 @@ function Main() {
                                 <span className={count === 3 ? "active" : ""}>
                                     <img
                                         ref={imgRef2}
-                                        style={{ width: "104rem" }}
+                                        className="earthquake"
                                         src="./asset/earthquake.png"
                                     />
                                 </span>

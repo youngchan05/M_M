@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderWrapper = styled.div`
     position: fixed;
@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.div`
     z-index: 10;
     .logo {
         img {
-            width: 40rem;
+            height: 40rem;
         }
     }
     .menuBar {
@@ -22,4 +22,18 @@ export const HeaderWrapper = styled.div`
         justify-content: space-between;
         height: 96rem;
     }
+
+    ${({ theme: { media } }) => {
+        return css`
+            ${media(
+                "xs",
+                `
+                top:24rem;
+                .content {
+                    height: 52rem;
+                }
+                `
+            )}
+        `;
+    }}
 `;

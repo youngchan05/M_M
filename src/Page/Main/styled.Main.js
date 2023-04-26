@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const MainBox = styled.div`
     .section {
@@ -53,4 +53,46 @@ export const MainBox = styled.div`
             }
         }
     }
+    ${({ theme: { media } }) => {
+        return css`
+            ${media(
+                "l",
+                `
+                .content {
+                    padding-top: 96rem;
+                    .textBox {
+                        p {
+                            font-size: 88rem;
+                            line-height: 100rem;
+                        }
+                    }
+                }
+            `
+            )}
+            ${media(
+                "xs",
+                `
+                .content {
+                    padding-top: 160rem;
+                    .textBox {
+                        p {
+                            font-size: 30rem;
+                            line-height: 40rem;
+                        }
+                        .last {
+                            display:block;
+                        }
+                        .inner {
+                            display:flex;
+                            .logo {
+                                height:20rem;
+                                margin-right:4rem;
+                            }
+                        }
+                    }
+                }
+            `
+            )}
+        `;
+    }}
 `;

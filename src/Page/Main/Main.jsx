@@ -103,64 +103,67 @@ function Main() {
                         </strong>
                         를 만드는 것
                     </p>
-                    <p>
+                    <p className="last">
                         이것이 바로&nbsp;
-                        <strong
-                            style={{
-                                width: `${ref2?.current[count]?.offsetWidth}px`,
-                            }}
-                        >
-                            <span
-                                className={count === 0 ? "active" : ""}
-                                ref={(el) => (ref2.current[0] = el)}
-                            >
-                                <img
-                                    style={{ width: "162rem" }}
-                                    src="./asset/img_logo.png"
-                                />
-                            </span>
-                            <span
-                                className={
-                                    [1, 2].includes(count) ? "active" : ""
-                                }
-                                ref={(el) => {
-                                    ref2.current[1] = el;
-                                    ref2.current[2] = el;
+                        <br className="is_pc" />
+                        <p className="inner">
+                            <strong
+                                style={{
+                                    width: `${ref2?.current[count]?.offsetWidth}px`,
                                 }}
                             >
-                                MM
-                            </span>
-                            <span
-                                className={count === 3 ? "active" : ""}
-                                ref={(el) => (ref2.current[3] = el)}
+                                <span
+                                    className={count === 0 ? "active" : ""}
+                                    ref={(el) => (ref2.current[0] = el)}
+                                >
+                                    <img
+                                        className="logo"
+                                        src="./asset/img_logo.png"
+                                    />
+                                </span>
+                                <span
+                                    className={
+                                        [1, 2].includes(count) ? "active" : ""
+                                    }
+                                    ref={(el) => {
+                                        ref2.current[1] = el;
+                                        ref2.current[2] = el;
+                                    }}
+                                >
+                                    MM
+                                </span>
+                                <span
+                                    className={count === 3 ? "active" : ""}
+                                    ref={(el) => (ref2.current[3] = el)}
+                                >
+                                    M
+                                </span>
+                                <span
+                                    className={count === 4 ? "active" : ""}
+                                    ref={(el) => (ref2.current[4] = el)}
+                                >
+                                    MM_
+                                </span>
+                            </strong>
+                            이 믿는 혁
+                            <strong
+                                style={{
+                                    width:
+                                        count === 3
+                                            ? `${imgRef2?.current?.offsetWidth}px`
+                                            : 0,
+                                }}
                             >
-                                M
-                            </span>
-                            <span
-                                className={count === 4 ? "active" : ""}
-                                ref={(el) => (ref2.current[4] = el)}
-                            >
-                                MM_
-                            </span>
-                        </strong>
-                        이 믿는 혁
-                        <strong
-                            style={{
-                                width:
-                                    count === 3
-                                        ? `${imgRef2?.current?.offsetWidth}px`
-                                        : 0,
-                            }}
-                        >
-                            <span className={count === 3 ? "active" : ""}>
-                                <img
-                                    ref={imgRef2}
-                                    style={{ width: "104rem" }}
-                                    src="./asset/earthquake.png"
-                                />
-                            </span>
-                        </strong>
-                        신이죠
+                                <span className={count === 3 ? "active" : ""}>
+                                    <img
+                                        ref={imgRef2}
+                                        style={{ width: "104rem" }}
+                                        src="./asset/earthquake.png"
+                                    />
+                                </span>
+                            </strong>
+                            신이죠
+                        </p>
                     </p>
                 </div>
             </Section>

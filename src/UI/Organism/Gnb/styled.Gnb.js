@@ -13,13 +13,25 @@ export const GnbWrapper = styled.div`
     position: absolute;
     right: 80rem;
     top: 36rem;
-    width: 21rem;
-    height: 21rem;
-    background: url(./asset/arrow_back.png) no-repeat center;
+    width: 32rem;
+    height: 32rem;
+    background: url(./asset/arrow_back.png) no-repeat center / 22rem;
   }
   ul {
     padding: 192rem 0 0 80rem;
   }
+  ${({ theme: { media } }) => {
+    return css`
+      ${media(
+        "s",
+        `  
+              left: ${({ isActive }) => (isActive ? 0 : -100)}%;
+              width: 100%;
+              transition: all .5s;
+            `
+      )}
+    `;
+  }}
 `;
 
 export const GnbItem = styled.li`
@@ -36,7 +48,7 @@ export const GnbItem = styled.li`
         font-size: inherit;
         font-weight: inherit;
         &:hover {
-          background: url(./asset/${icon}) no-repeat left center;
+          background: url(./asset/${icon}) no-repeat left center / 48rem;
           padding-left: 68rem;
           color: #fff;
         }

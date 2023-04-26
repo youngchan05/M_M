@@ -13,6 +13,6 @@ export const ScrollInfoBox = styled.div`
     text-align: center;
     letter-spacing: -0.03em;
     color: #505050;
-    background: url(./asset/expand_more.png) no-repeat bottom center;
+    background: url(./asset/expand_more.png) no-repeat bottom center / 12rem;
   }
 `;

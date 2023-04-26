@@ -90,6 +90,9 @@ export const MainBox = styled.div`
                     p {
                         font-size: 62rem;
                         line-height: 70rem;
+                        img {
+                          height:62rem;
+                      }
                     }
                 }
             `

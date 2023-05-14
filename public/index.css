@@ -258,3 +258,14 @@ input[type="number"]::-webkit-inner-spin-button {
 #root {
 	min-height: 100%;
 }
+
+
+::-webkit-scrollbar {
+	width: 0rem;
+	height: 0rem;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 14px;
+	background-color: rgba(205, 209, 213, 0.2);
+}

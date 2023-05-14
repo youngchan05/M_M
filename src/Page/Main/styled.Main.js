@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Grid } from "../../UI/Atoms";
 
 export const MainBox = styled.div`
     ${({ isLoding }) => {
@@ -84,8 +85,8 @@ export const MainBox = styled.div`
     ${({ theme: { media } }) => {
         return css`
             ${media(
-                "l",
-                `
+            "l",
+            `
                 .content {
                     padding-top: 136rem;
                     .rightText {
@@ -105,10 +106,10 @@ export const MainBox = styled.div`
                     }
                 }
             `
-            )}
+        )}
             ${media(
-                "m",
-                `
+            "m",
+            `
                 .content {
                     padding-top: 244rem;
                     .rightText {
@@ -128,10 +129,10 @@ export const MainBox = styled.div`
                     }
                 }
             `
-            )}
+        )}
       ${media(
-                "s",
-                `
+            "s",
+            `
                 .content {
                     padding-top: 174rem;
                     .rightText {
@@ -164,10 +165,10 @@ export const MainBox = styled.div`
                     }
                 }
             `
-            )}
+        )}
       ${media(
-                "xs",
-                `
+            "xs",
+            `
                 .content {
                     padding-top: 116rem;
                     .rightText {
@@ -197,7 +198,20 @@ export const MainBox = styled.div`
                     }
                 }
             `
-            )}
+        )}
         `;
     }}
 `;
+
+
+export const MainSecondWrapper = styled(Grid)`
+height:100vh ;
+position:relative;
+background:url('./asset/second_Background.jpg') center repeat;
+background-size:cover;
+color:#fff;
+.flex{
+    background-color:rgba(110, 40, 0, 0.25);
+    padding:40rem 60rem;
+}
+`
